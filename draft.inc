@@ -73,12 +73,12 @@ The statistically driven epidemiological workflow only allows to determine \emph
 
 This work is the result of a collaboration between epidemiologists of the Study of Health in Pomerania (SHIP) \cite{SHIP} and computer scientists of the University of Magdeburg under the umbrella of the DFG Project "Visual Analysis in Public Health".
 %%
-The focus lies on novel techniques for analyzing both image- and non-image data of cohort study data simultaneously.
+The focus lies on developing novel techniques for analyzing both image- and non-image data of cohort studies simultaneously.
 %%
 We took the following steps to achieve this goal.
 
 \begin{itemize}
-	\item Building a Interactive Visual Analysis (IVA) system which is based on analysis of the epidemiological workflow to allow rapid hypothesis validation- and generation \cite{Klemm2014VIS}.
+	\item Building a Interactive Visual Analysis (IVA) system based on the analysis of the epidemiological workflow to allow rapid hypothesis validation- and generation \cite{Klemm2014VIS}.
 	%%
 	\item Combine shape variability visualization techniques with information visualizations of non-image data \cite{Klemm2014VIS}.
 	%%
@@ -96,6 +96,8 @@ All publications use a lumbar spine data set from the Study of Health in Pomeran
 It consists of 6.753 subjects from two cohorts with 77 parameter compiled by domain experts.
 %
 The image data was segmented using a tetrahedron-based finite element model \cite{Rak2013}.
+
+\section{Epidemiological Background}
 
 Epidemiological data is analyzed for statistical resilience of features associated with an epidemiological outcome of a disease.
 %
@@ -128,7 +130,7 @@ This workflow is briefly described in the following section.
   \label{fig:workflowcomparison}
 \end{figure}
 %
-Figure~\ref{fig:workflowcomparison} presents the epidemiological workflow following Thew and colleagues, which is described as follows \cite{Thew2009}:
+Figure~\ref{fig:workflowcomparison} (left) presents the epidemiological workflow following Thew and colleagues, which is described as follows \cite{Thew2009}:
 %
 \begin{enumerate}
 	\item A hypothesis is derived from observations made by clinicians in their daily routine.
@@ -247,7 +249,7 @@ Morphometric information from landmarks comprises thickness, diameter or length 
 
 \section{Interactive Visual Analysis of Cohort Study Data}
 
-The proposed \emph{IVA} workflow knows three major steps: Feature selection, visualization and brushing.
+The proposed \emph{IVA} workflow (Fig~\ref{fig:workflowcomparison} (right)) knows three major steps: Feature selection, visualization and brushing.
 %
 A hypothesis-driven analysis usually starts with the selection of features.
 %
@@ -274,8 +276,8 @@ Selecting features also triggers a \emph{multivariate analysis} using contingenc
 %
 A sample workflow using interaction and visualization techniques can be seen in Figure~\ref{fig:visualization} \cite{Klemm2014VIS}.
 
-\section{Visualization and Analysis of Lumbar Spine Canal Variability}
-\emph{Hypothesis generation} is triggered by suggesting interesting feature correlations based on organ shape.
+\subsection{Visualization and Analysis of Organ Shape Variability}
+\emph{Hypothesis generation} based on organ shape is triggered by suggesting interesting feature correlations.
 %
 This allows for assessment of shape groups, which can not be accomplished with standard epidemiological methods.
 %
@@ -285,11 +287,11 @@ This allows for assessment of shape groups, which can not be accomplished with s
 % 	\item visualization of these groups by means of representatives.
 % %	\item 
 % \end{itemize}
-Clustering using Agglomerative Hierarchical Clustering is carried out to form groups that exhibit low intra-group and high inter-group shape variability. 
+Clustering using Agglomerative Hierarchical Clustering is carried out to form groups that exhibit low intra-group and high inter-group shape variability \cite{Klemm2013VMV}. 
 %
 The clusters are visualized by means of representatives to reduce visual clutter and simplify a comparison between subgroups of the cohort.
 %
-Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with lumbar back pain which leads to interesting results regarding major shape classes as well as potentially pathological outliers.%demonstrates the benefits from obtaining shape-based groups for subjects groups.
+Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with lumbar back pain, which leads to interesting results regarding major shape classes as well as potentially pathological outliers \cite{Klemm2013VMV}.
 \begin{figure}[htb]
  \centering
  %\includegraphics[width=1.5in]{figures/InteractionLoop}
@@ -306,6 +308,28 @@ Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with l
  }
  \label{fig:hypopthesisbased}
 \end{figure}
+
+% TODO: [high] GRAPP Paper hier her wenn es angenommen wird
+
+\subsection{Hypothesis-generation using Overview Visualizations}
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=3.0in]{figures/similarity_matrix}
+ \caption{Contingency matrix of 129 variables (127 data set variables, 2 cluster results) showing 16,641 combinations based on \emph{Cram\'{e}r's V} contingency values.
+ %
+ Color brightness encodes association strength.
+ %Mouse-over focuses a entry and highlights the feature names for better readability.
+ Moving the mouse over an entry enlarges the variable names for better readability.
+ % Potential Cut here
+ %The enlarged excerpt shows associations for shape clusters of subjects with and without diagnosed spine attrition, which show associations between gender, weight, body height and smoking behavior.
+ }
+ \label{fig:contingencymatrix}
+\end{figure}
+Overview visualizations for non-image variables or image-derived variables can be provided using contingency values, such as \emph{Cram\'{e}r's V}.
+%%
+These values can be used to create a contingency matrix, which displays correlations between variables (Fig.~\ref{fig:contingencymatrix}).
+%%
+In a qualitative evaluation, epidemiologists used this visualizations to observe potential unexpected correlations, forming a new hypothesis, which serves as starting point for a new analysis \cite{Klemm2014VIS}.
 
 \section{Conclusion and Future Work}
 We presented IVA tools for image and non-image centric cohort study data.
