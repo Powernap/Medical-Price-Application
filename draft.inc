@@ -7,7 +7,7 @@
 
 % for anonymous conference submission please enter your SUBMISSION ID
 % instead of the author's name (and leave the affiliation blank) !!
-\author[Paul Klemm, Steffen Oeltze-Jafra, Kai Lawonn, Sylvia Gla{\ss}er, Katrin Hegenscheid, Henry V{\"o}lzke, Bernhard Preim]
+\author[Paul Klemm et al.]
        {Paul Klemm$^{1}$, Kai Lawonn$^{1}$, Sylvia Gla{\ss}er$^{1}$, Steffen Oeltze-Jafra$^{1}$, Katrin Hegenscheid$^{2}$, Henry V{\"o}lzke$^{2}$, Bernhard Preim$^{1}$
         \\
 % For Computer Graphics Forum: Please use the abbreviation of your first name.
@@ -61,6 +61,7 @@ Using all reliable information from the image segmentation linked to non-image f
 \end{abstract}
 %-------------------------------------------------------------------------
 \section{Introduction and Project Background}
+
 Epidemiology characterizes the influence of causes to disease and health conditions of defined populations.
 %%
 Cohort studies are population-based studies involving usually large numbers of randomly selected individuals and comprising numerous attributes, ranging from self-reported interview data to results from various medical examinations, e.g., blood and urine samples (\emph{features}).
@@ -96,15 +97,215 @@ It consists of 6.753 subjects from two cohorts with 77 parameter compiled by dom
 %
 The image data was segmented using a tetrahedron-based finite element model \cite{Rak2013}.
 
-\section{Extending the Epidemiological Workflow}
+Epidemiological data is analyzed for statistical resilience of features associated with an epidemiological outcome of a disease.
+%
+For example, when clinical observations suggest a correlation between breast fat content and breast cancer in women, these two features are extracted from the data and correlated.
+%
+\emph{Confounders} are features, which bias an epidemiological outcome next to analyzed features.
+%
+Age for example strongly correlates with most types of cancer and therefore a result needs to be age-adjusted.
 
-\subsection{Epidemiological Workflow}
+To meet requirements for reproducibility and comprehensibility it is essential to understand the epidemiological workflow.
+%
+Visual analysis of cohort study data aims to extend the standard epidemiological workflow for the following aspects:
+\begin{itemize}
+	\item Enable epidemiologists to examine both image-based as well as non-image data, e.g., sociodemographic features and attributes derived from the image data.
+	\item Provide methods that assess local variations of shape of a anatomical structure under different medical related or lifestyle influences.
+	\item Visual validation of presumptions and hypothesis about heterogenous features influencing various diseases using appropriate visualizations.
+	\item Use of data mining tools such as clustering or the principal component analysis provides possibilities to group subjects regarding shape or other features.
+\end{itemize}
+%
+To create methods suitable for application in the epidemiological context it is essential to understand how epidemiologists work.
+%
+This workflow is briefly described in the following section.
+%
+%-------------------------------------------------------------------------
+\subsection{Epidemiological Workflow} \label{sec:epiworkflow}
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=3.0in]{figures/workflow_comparison}
+ \caption{Interactive Visual Analysis (\emph{IVA}) tools complement parts of the epidemiological workflow instead of replacing them. The appropriate combination of statistical and interactive-driven analysis shows promising potential to unveil the information in the data. (a) shows the standard epidemiological workflow, (b) the \emph{IVA} supported one.}
+  \label{fig:workflowcomparison}
+\end{figure}
+%
+Figure~\ref{fig:workflowcomparison} presents the epidemiological workflow following Thew and colleagues, which is described as follows \cite{Thew2009}:
+%
+\begin{enumerate}
+	\item A hypothesis is derived from observations made by clinicians in their daily routine.
+	%
+	\item A set of features depicting conditions affected by the hypothesis is compiled accordingly.
+	%
+	\item Confounding features are identified and taken into account (for example using stratification). 
+	%
+	\item Statistical methods, such as regression analysis, assess the association of selected features with the investigated disease.
+\end{enumerate}
+%
+Reproducibility of results is an epidemiological key requirement.
+%
+It is difficult to achieve, since many physicians are involved when thousands of test persons are examined and interviewed.
+%
+If the data acquisition process changes, an information bias is introduced to the data, hampering inference in and between acquisition cycles.
+%
 
-\subsection{Epidemiological Data}
+In longitudinal cohort studies, grouping subjects using epidemiological features is essential in order to allow per-group risk determination.
+%
+Grouping depends on the underlying hypothesis.
+%
+Age for example is divided into groups (e.g. in 20 year steps) when investigating its influence on a condition.
+%
+These groups strongly depend on the condition of interest and therefore there is no standard on how to categorize them.
 
-\section{Visualization and Analysis of Lumbar Spine Canal Variability}
+To determine whether a subject is prone to be affected by a certain disease, \emph{relative risks} are expressed through the evaluation of p-values, which indicate statistical significance.
+%
+% Statistical correlations are prone to \emph{confounding}, meaning that the association of two features is influenced by a third feature, which needs to be isolated.
+% %
+% A famous example for a confounder is the association between shoe size and mortality, where it can be observed that people with larger shoe size have a smaller life expectation than people with small shoe size.
+% %
+% The shoe size is actually associated with gender, where women have smaller feet than men but also a longer life expectation.
+%
+%Statistics tools such as \texttt{SPSS}\footnote{Product of IBM; \url{http://ibm.com/software/analytics/spss/}} play a major role for analyzing epidemiological data.
+%
+Graphic data representation is largely used to present results rather than gaining insight.
+
+\begin{figure*}[htb]
+ \centering
+ % \includegraphics[width=1\textwidth, resolution=300]{figures/visualization}
+ \includegraphics[width=1\textwidth]{figures/visualization}
+ \caption{(Left) Screenshot from the \emph{IVA} system, which is divided as follows: (a) The sidebar containing all features as well as the groups defined in the analysis process; (b) the canvas area where features can be added via drag and drop and the visualization can be chosen automatically according to the data type; (c) the interactive pivot table showing the exact numbers for each displayed feature combination.
+ %%
+ The data displayed is used to analyze the lumbar spine.
+ %%
+ Features can be added freely on the canvas via drag and drop.
+ %%
+ Dropping the \emph{age} parameter on the already plotted \emph{body size} container creates a mosaic plot combining both features (right) \cite{Klemm2014VIS}.
+ }
+ \label{fig:visualization}
+\end{figure*}
+\subsection{Epidemiological Data} \label{EpidemiologicalData}
+Epidemiological data are highly heterogenous and incomplete.
+%
+Information about medical history and examinations, genetic conditions, geographical data, questionnaire results and image data yield a complex data space for each subject.
+%
+For ethical, legal or medical reasons some features cannot be gathered for each subject.
+%
+The most obvious example are women-specific questions about menstrual status or number of born children.
+%
+Follow-up examinations or questions about conditions like medications taken after a diagnosed disease also yield features only available for a small amount of subjects.
+%
+
+Indicators for medical conditions as well as questions about a subject's lifestyle are also often \emph{dichotomous}--they have two manifestations (\emph{Yes} or \emph{No}).
+%
+Dichotomous data can also be derived by aggregating features to yield only two manifestations (e.g. subjects younger or older than 50 years).
+%
+Medical examinations mostly comprise categorical (e.g. levels of back pain) and continuous values (e.g. age or body size).
+
+% \paragraph{Image acquisition.} \label{ImageAcquisition} Imaging techniques involving ionizing radiation for the subject are not suitable for ethical reasons.
+% %
+% Therefore, MRI is the main method for collecting cohort study imaging data.
+% %
+% The image quality is a tradeoff between accuracy and affordability \cite{Preim2014}.
+% %
+% This often yields image resolutions inferior to those of clinical day-to-day practice, which makes their analysis more challenging.
+% %
+% The equipment used to gather medical image data is kept, if possible, on the initial software and hardware version during a longitudinal study to ensure comparability in and between acquisition cycles.
+%-------------------------------------------------------------------------
+\noindent \textbf{Image analysis.} \label{ImageAnalysis} Decisions have to be made on how image data are \emph{compared} and \emph{quantified}.
+%
+Segmentation masks representing the voxels of an anatomical structure would be ideal, since many different key figures, e.g., volume, largest diameter or aspect ratio, can be derived from them.
+%
+Since reliable and efficient segmentation techniques for these data are not available in general, epidemiologists are forced to measure the data by hand, which is a very tedious work with respect to the number of necessary landmarks and the number of subjects.
+%
+Information derived by landmarks, such as top and bottom point of a vertebra, are by far not as expressive and versatile as segmentation masks describing its whole shape.
+%
+They are also prone to a high inter-observer variability and are hard to reproduce.
+%
+This gains even more importance when analyzing multiple time steps.
+%
+Morphometric information from landmarks comprises thickness, diameter or length of a structure as well as grey value distribution in an area (used for determining the type of tissue) \cite{Preim2014}.
+
+% \section{The Study of Health in Pomerania (SHIP)}
+% After the pioneering Rotterdam study (started in 1990), several MR imaging study initiatives have evolved.
+% %
+% They slightly differ in clinical focus, acquired data and epidemiological research questions.
+% %
+% Starting in 1997 with a cohort consisting of 4,308 subjects, the \texttt{SHIP}, located in Northern Germany, aims to characterize health and disease in the widest range possible \cite{Volzke2011}.
+% %
+% Data is collected without focus on a group of diseases.
+% %
+% This allows the data set to be queried regarding many different diseases and conditions.
+% %
+% Subjects were examined in a 5-year time span, continuously adding new parameters including MRI scans in the last iteration \cite{Hegenscheid2009}.
+% %
+% The MRI protocol features a rich number of sequences.
+% %
+% A second cohort \texttt{SHIP-Trend} was established in 2008.
+% %
+% The protocols for examining the subjects between \texttt{SHIP} and \texttt{SHIP-Trend} remained the same, making them comparable.
+% %
+% The overall examination time for each person attending the study is two days.
+%-------------------------------------------------------------------------
 
 \section{Interactive Visual Analysis of Cohort Study Data}
+
+The proposed \emph{IVA} workflow knows three major steps: Feature selection, visualization and brushing.
+%
+A hypothesis-driven analysis usually starts with the selection of features.
+%
+A feature selection from a shape-based clustering creates shape groups.
+%
+\emph{Hypothesis generation} with focus on image data starts with a shape-based clustering.
+%
+The feature is mapped using an automatically chosen visualization appropriate for its data type. %(described in detail in the following section).
+%
+The visualization techniques have to combine both image-and non-image data in order to set domain and range data in relation to each other.
+%
+In our system, the visualization can either be brushed or new features can be added to the analysis. 
+%Subsequently the visualization can be either brushed or new features can be added to the analysis.
+%
+Brushing methods are subdivided using the previously described \emph{IVA} patterns.
+%
+Brushed regions are treated like features as they divide the subject space just like categorical features. %and lead therefore to a new feature selection.
+%
+Selecting features also triggers a \emph{multivariate analysis} using contingency values to highlight features associated with selected features.
+%
+%The starting point of \emph{IVA Loop} is determined whether the analysis is hypothesis-driven or exploratory.
+%
+%An analysis with the aim of hypothesis generation of image-based data starts with a clustering of the structure 
+%
+A sample workflow using interaction and visualization techniques can be seen in Figure~\ref{fig:visualization} \cite{Klemm2014VIS}.
+
+\section{Visualization and Analysis of Lumbar Spine Canal Variability}
+\emph{Hypothesis generation} is triggered by suggesting interesting feature correlations based on organ shape.
+%
+This allows for assessment of shape groups, which can not be accomplished with standard epidemiological methods.
+%
+% The contributions are:
+% \begin{itemize}
+% 	\item generation of groups of individuals sharing a similar shape of the lumbar spine canal,
+% 	\item visualization of these groups by means of representatives.
+% %	\item 
+% \end{itemize}
+Clustering using Agglomerative Hierarchical Clustering is carried out to form groups that exhibit low intra-group and high inter-group shape variability. 
+%
+The clusters are visualized by means of representatives to reduce visual clutter and simplify a comparison between subgroups of the cohort.
+%
+Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with lumbar back pain which leads to interesting results regarding major shape classes as well as potentially pathological outliers.%demonstrates the benefits from obtaining shape-based groups for subjects groups.
+\begin{figure}[htb]
+ \centering
+ %\includegraphics[width=1.5in]{figures/InteractionLoop}
+ \includegraphics[width=3.5in]{figures/hypothesisbased}
+ \caption{(a) Dichotomous questionnaire answer to ``\emph{Did you experience back pain in the past three months?}''.
+ %
+ Mean shapes between the groups show no difference.
+ %
+ (b) Shape-based clustering for all subjects who suffered from back pain yields 6 groups. 
+ %
+ Note that the difference in subject count is due to the missing shape information for some subjects.
+ %
+% The total count of subjects in (b) is smaller 
+ }
+ \label{fig:hypopthesisbased}
+\end{figure}
 
 \section{Conclusion and Future Work}
 
