@@ -293,7 +293,7 @@ Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with l
 \begin{figure}[htb]
  \centering
  %\includegraphics[width=1.5in]{figures/InteractionLoop}
- \includegraphics[width=3.5in]{figures/hypothesisbased}
+ \includegraphics[width=3.0in]{figures/hypothesisbased}
  \caption{(a) Dichotomous questionnaire answer to ``\emph{Did you experience back pain in the past three months?}''.
  %
  Mean shapes between the groups show no difference.
@@ -308,6 +308,29 @@ Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with l
 \end{figure}
 
 \section{Conclusion and Future Work}
+We presented IVA tools for image and non-image centric cohort study data.
+%%
+The methods aim to complement weaknesses of the existing epidemiological workflow rather than replacing it.
+%%
+Overview viszualizations of both image and non-image data allow for explorative analysis of cohort study data, which was not possible for our collaborators before.
+%%
+Using these techniques, new insights about possible risk factors and parameter associations could be found.
+%%
+
+Future work in this field comprises methods for providing overview visualizations for multivariate correlations using regression models.
+%%
+As (semi-)automatic image segmentation algorithms become available to epidemiologists, new body structures can be included into the analysis system.
+%%
+This also requires the identification of structure specific measures, e.g. curvature for the spine canal or volume of the liver.
+%%
+
+Applying Visual Analysis methods into the epidemiology is still very unfamiliar to domain experts.
+%%
+Methods need to meet the high quality standards of epidemiological research while trying to provide new insight into the data.
+%%
+Meeting both of these requirements is challenging.
+%%
+The complexity of the underlying data make cohort studies a promising field for developing new IVA methods.
 
 \bibliographystyle{style/eg-alpha-doi}
 
