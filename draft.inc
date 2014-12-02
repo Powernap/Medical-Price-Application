@@ -97,7 +97,7 @@ It consists of 6.753 subjects from two cohorts with 77 parameter compiled by dom
 %
 The image data was segmented using a tetrahedron-based finite element model \cite{Rak2013}.
 
-\section{Epidemiological Background}
+\section{Epidemiological Workflow Analysis}
 
 Epidemiological data is analyzed for statistical resilience of features associated with an epidemiological outcome of a disease.
 %
@@ -276,7 +276,7 @@ Selecting features also triggers a \emph{multivariate analysis} using contingenc
 %
 A sample workflow using interaction and visualization techniques can be seen in Figure~\ref{fig:visualization} \cite{Klemm2014VIS}.
 
-\subsection{Visualization and Analysis of Organ Shape Variability}
+\noindent \textbf{Visualization and Analysis of Organ Shape Variability}. 
 \emph{Hypothesis generation} based on organ shape is triggered by suggesting interesting feature correlations.
 %
 This allows for assessment of shape groups, which can not be accomplished with standard epidemiological methods.
@@ -311,7 +311,7 @@ Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with l
 
 % TODO: [high] GRAPP Paper hier her wenn es angenommen wird
 
-\subsection{Hypothesis-generation using Overview Visualizations}
+\noindent \textbf{Hypothesis-generation using Overview Visualizations}.
 \begin{figure}[htb]
  \centering
  \includegraphics[width=3.0in]{figures/similarity_matrix}
@@ -336,9 +336,9 @@ We presented IVA tools for image and non-image centric cohort study data.
 %%
 The methods aim to complement weaknesses of the existing epidemiological workflow rather than replacing it.
 %%
-Overview viszualizations of both image and non-image data allow for explorative analysis of cohort study data, which was not possible for our collaborators before.
+Overview visualizations of both image and non-image data allow for explorative analysis of cohort study data, which was not possible for our collaborators before.
 %%
-Using these techniques, new insights about possible risk factors and parameter associations could be found.
+Using these techniques, new insights about possible risk factors and parameter associations could be derived.
 %%
 
 Future work in this field comprises methods for providing overview visualizations for multivariate correlations using regression models.
@@ -348,7 +348,7 @@ As (semi-)automatic image segmentation algorithms become available to epidemiolo
 This also requires the identification of structure specific measures, e.g. curvature for the spine canal or volume of the liver.
 %%
 
-Applying Visual Analysis methods into the epidemiology is still very unfamiliar to domain experts.
+Applying Visual Analysis methods into the epidemiological workflow is still very unfamiliar to domain experts.
 %%
 Methods need to meet the high quality standards of epidemiological research while trying to provide new insight into the data.
 %%
