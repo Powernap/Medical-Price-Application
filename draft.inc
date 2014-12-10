@@ -79,7 +79,7 @@ The focus lies on developing novel techniques for analyzing both image- and non-
 We took the following steps to achieve this goal.
 
 \begin{itemize}
-	\item Building a Interactive Visual Analysis (IVA) system based on the analysis of the epidemiological workflow to allow rapid hypothesis validation- and generation \cite{Klemm2014VIS}.
+	\item Building a Interactive Visual Analysis (IVA) system based on the analysis of the epidemiological workflow to allow rapid hypothesis validation- and \emph{generation} \cite{Klemm2014VIS}.
 	%%
 	\item Combine shape variability visualization techniques with information visualizations of non-image data \cite{Klemm2014VIS}.
 	%%
@@ -108,7 +108,7 @@ For example, when clinical observations suggest a correlation between breast fat
 %
 Age for example strongly correlates with most types of cancer and therefore a result needs to be age-adjusted.
 
-To meet requirements for reproducibility and comprehensibility it is essential to understand the epidemiological workflow.
+%To meet requirements for reproducibility and comprehensibility it is essential to understand the epidemiological workflow.
 %
 Visual analysis of cohort study data aims to extend the standard epidemiological workflow for the following aspects:
 \begin{itemize}
@@ -124,7 +124,7 @@ This workflow is briefly described in the following section.
 %
 %-------------------------------------------------------------------------
 \subsection{The classic Epidemiological Workflow} \label{sec:epiworkflow}
-\begin{figure}[htb]
+\begin{figure}[!t]
  \centering
  \includegraphics[width=3.0in]{figures/workflow_comparison}
  \caption{Interactive Visual Analysis (\emph{IVA}) tools complement parts of the epidemiological workflow instead of replacing them. The appropriate combination of statistical and interactive-driven analysis shows promising potential to unveil the information in the data. (a) shows the standard epidemiological workflow, (b) the \emph{IVA} supported one.}
@@ -157,7 +157,7 @@ Grouping depends on the underlying hypothesis.
 Age for example is divided into groups (e.g. in 20 year steps) when investigating its influence on a condition.
 %
 These groups strongly depend on the condition of interest and therefore there is no standard on how to categorize them.
-
+%%
 To determine whether a subject is prone to be affected by a certain disease, \emph{relative risks} are expressed through the evaluation of p-values, which indicate statistical significance.
 %
 % Statistical correlations are prone to \emph{confounding}, meaning that the association of two features is influenced by a third feature, which needs to be isolated.
@@ -170,20 +170,18 @@ To determine whether a subject is prone to be affected by a certain disease, \em
 %
 Graphic data representation is largely used to present results rather than gaining insight.
 
-\begin{figure*}[htb]
+\begin{figure}[htb]
  \centering
  % \includegraphics[width=1\textwidth, resolution=300]{figures/visualization}
- \includegraphics[width=1\textwidth]{figures/visualization}
- \caption{(Left) Screenshot from the \emph{IVA} system, which is divided as follows: (a) The sidebar containing all features as well as the groups defined in the analysis process; (b) the canvas area where features can be added via drag and drop and the visualization can be chosen automatically according to the data type; (c) the interactive pivot table showing the exact numbers for each displayed feature combination.
+ \includegraphics[width=3.0in]{figures/visualization.pdf}
+ \caption{(Left) Screenshot from the \emph{IVA} system, which is divided as follows: (a) The sidebar containing all features; (b) the canvas area where features can be added via drag and drop and the visualization can be chosen automatically according to the data type; (c) the pivot table showing the exact numbers for each displayed feature combination.
  %%
- The data displayed is used to analyze the lumbar spine.
+ The data displayed is used to analyze the lumbar spine \cite{Klemm2014VIS}.
  %%
- Features can be added freely on the canvas via drag and drop.
- %%
- Dropping the \emph{age} parameter on the already plotted \emph{body size} container creates a mosaic plot combining both features (right) \cite{Klemm2014VIS}.
+ %Dropping the \emph{age} parameter on the already plotted \emph{body size} container creates a mosaic plot combining both features (right) \cite{Klemm2014VIS}.
  }
  \label{fig:visualization}
-\end{figure*}
+\end{figure}
 \subsection{Epidemiological Data} \label{EpidemiologicalData}
 Epidemiological data are highly heterogenous and incomplete.
 %
@@ -195,7 +193,6 @@ The most obvious example are women-specific questions about menstrual status or 
 %
 Follow-up examinations or questions about conditions like medications taken after a diagnosed disease also yield features only available for a small amount of subjects.
 %
-
 Indicators for medical conditions as well as questions about a subject's lifestyle are also often \emph{dichotomous}--they have two manifestations (\emph{Yes} or \emph{No}).
 %
 Dichotomous data can also be derived by aggregating features to yield only two manifestations (e.g. subjects younger or older than 50 years).
@@ -212,18 +209,20 @@ Medical examinations mostly comprise categorical (e.g. levels of back pain) and 
 % %
 % The equipment used to gather medical image data is kept, if possible, on the initial software and hardware version during a longitudinal study to ensure comparability in and between acquisition cycles.
 %-------------------------------------------------------------------------
-\noindent \textbf{Image analysis.} \label{ImageAnalysis} Decisions have to be made on how image data are \emph{compared} and \emph{quantified}.
-%
+\noindent \textbf{Image analysis.} \label{ImageAnalysis} 
+%%
+Decisions have to be made on how image data are \emph{compared} and \emph{quantified}.
+%%
 Segmentation masks representing the voxels of an anatomical structure would be ideal, since many different key figures, e.g., volume, largest diameter or aspect ratio, can be derived from them.
-%
+%%
 Since reliable and efficient segmentation techniques for these data are not available in general, epidemiologists are forced to measure the data by hand, which is a very tedious work with respect to the number of necessary landmarks and the number of subjects.
-%
+%%
 Information derived by landmarks, such as top and bottom point of a vertebra, are by far not as expressive and versatile as segmentation masks describing its whole shape.
-%
-They are also prone to a high inter-observer variability and are hard to reproduce.
-%
-This gains even more importance when analyzing multiple time steps.
-%
+%%
+%They are also prone to a high inter-observer variability and are hard to reproduce.
+%%
+%This gains even more importance when analyzing multiple time steps.
+%%
 Morphometric information from landmarks comprises thickness, diameter or length of a structure as well as grey value distribution in an area (used for determining the type of tissue) \cite{Preim2014}.
 
 % \section{The Study of Health in Pomerania (SHIP)}
@@ -250,11 +249,11 @@ Morphometric information from landmarks comprises thickness, diameter or length 
 
 \section{Interactive Visual Analysis of Cohort Study Data}
 
-The proposed \emph{IVA} workflow (Fig~\ref{fig:workflowcomparison} (right)) knows three major steps: Feature selection, visualization and brushing.
+The proposed \emph{IVA} workflow (Fig~\ref{fig:workflowcomparison} (right)) knows three major steps: \emph{feature selection}, \emph{visualization} and \emph{brushing}.
 %
 A hypothesis-driven analysis usually starts with the selection of features.
 %
-A feature selection from a shape-based clustering creates shape groups.
+A feature selection from a shape-based clustering creates \emph{shape groups}.
 %
 \emph{Hypothesis generation} with focus on image data starts with a shape-based clustering.
 %
@@ -265,9 +264,9 @@ The visualization techniques have to combine both image-and non-image data in or
 In our system, the visualization can either be brushed or new features can be added to the analysis. 
 %Subsequently the visualization can be either brushed or new features can be added to the analysis.
 %
-Brushing methods are subdivided using the previously described \emph{IVA} patterns.
+%Brushing methods are subdivided using the previously described \emph{IVA} patterns.
 %
-Brushed regions are treated like features as they divide the subject space just like categorical features. %and lead therefore to a new feature selection.
+%Brushed regions are treated like features as they divide the subject space just like categorical features. %and lead therefore to a new feature selection.
 %
 Selecting features also triggers a \emph{multivariate analysis} using contingency values to highlight features associated with selected features.
 %
@@ -293,7 +292,7 @@ Clustering using Agglomerative Hierarchical Clustering is carried out to form gr
 The clusters are visualized by means of representatives to reduce visual clutter and simplify a comparison between subgroups of the cohort.
 %
 Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with lumbar back pain, which leads to interesting results regarding major shape classes as well as potentially pathological outliers \cite{Klemm2013VMV}.
-\begin{figure}[htb]
+\begin{figure}[!t]
  \centering
  %\includegraphics[width=1.5in]{figures/InteractionLoop}
  \includegraphics[width=3.0in]{figures/hypothesisbased}
@@ -326,7 +325,7 @@ The work concludes that the given model precision is not enough to characterize 
 %% ---------------------------------
 
 \noindent \textbf{Hypothesis-generation using Overview Visualizations}.
-\begin{figure}[htb]
+\begin{figure}[!t]
  \centering
  \includegraphics[width=3.0in]{figures/similarity_matrix}
  \caption{Contingency matrix of 129 variables (127 data set variables, 2 cluster results) showing 16,641 combinations based on \emph{Cram\'{e}r's V} contingency values.
