@@ -86,7 +86,7 @@ We took the following steps to achieve this goal.
 	%%
 	\item Use data mining to derive shape-based groups of subjects using clustering techniques \cite{Klemm2013VMV}.
 	%%
-	\item Use classification methods to derive insight into specific disease risk factors \cite{IVAPP}.
+	\item Use classification methods to derive insight into specific disease risk factors \cite{Klemm2015IVAPP}.
 \end{itemize}
 %
 The proposed methods are introduced as part of an Interactive Visual Analysis approach presented in the following section.
@@ -122,7 +122,7 @@ To create methods suitable for application in the epidemiological context it is 
 This workflow is briefly described in the following section.
 %
 %-------------------------------------------------------------------------
-\subsection{Epidemiological Workflow} \label{sec:epiworkflow}
+\subsection{The classic Epidemiological Workflow} \label{sec:epiworkflow}
 \begin{figure}[htb]
  \centering
  \includegraphics[width=3.0in]{figures/workflow_comparison}
@@ -309,7 +309,20 @@ Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with l
  \label{fig:hypopthesisbased}
 \end{figure}
 
-% TODO: [high] GRAPP Paper hier her wenn es angenommen wird
+%% ---------------------------------
+\noindent \textbf{Interactive Visual Analysis of Lumbar Back Pain}. 
+Decision trees are incorporated to assess the discriminative power of image parameters derived from the lumbar spine segmentation model presented in \cite{Klemm2013VMV} towards back pain related variables.
+%%
+A decision tree classifier was calculated for each non-image variable and assessed towards classification accuracy and number of decision rules.
+%%
+Low classification errors by trees with few decision rules are preferred.
+%%
+A interactive scatter plot represents each decision tree as data point using the accuracy number of rules, allowing for a fast overview visualization.
+%
+Decision trees for each data point can be examined in detail by interacting with the scatter plot.
+%%
+The work concludes that the given model precision is not enough to characterize back pain, but allows to classify other non-image variables, such as the subject age when he or she started smoking \cite{Klemm2015IVAPP}.
+%% ---------------------------------
 
 \noindent \textbf{Hypothesis-generation using Overview Visualizations}.
 \begin{figure}[htb]
@@ -331,6 +344,9 @@ These values can be used to create a contingency matrix, which displays correlat
 %%
 In a qualitative evaluation, epidemiologists used this visualizations to observe potential unexpected correlations, forming a new hypothesis, which serves as starting point for a new analysis \cite{Klemm2014VIS}.
 
+%% ---------------------------------
+%\noindent \textbf{Hypothesis-generation using Overview Visualizations}.
+%
 \section{Conclusion and Future Work}
 We presented IVA tools for image and non-image centric cohort study data.
 %%
