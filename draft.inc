@@ -42,7 +42,8 @@ The data are analyzed using a priori defined hypotheses to find statistically si
 Modern cohort studies incorporate medical image data.
 %%
 The statistically driven epidemiological workflow only allows to determine associations between image-derived metrics, such as distances extracted from landmarks of the segmentation model.
-\\\\
+%%
+
 We propose methods for analyzing image- centric cohort study data with focus on assessing influences of organ shape.
 %%
 To account for epidemiological key requirements such as reproducibility and statistical resilience of results, the epidemiological workflow is analyzed and divided into different steps.
@@ -64,7 +65,7 @@ Using all reliable information from the image segmentation linked to non-image f
 
 Epidemiology characterizes the influence of causes to disease and health conditions of defined populations.
 %%
-Cohort studies are population-based studies involving usually large numbers of randomly selected individuals and comprising numerous attributes, ranging from self-reported interview data to results from various medical examinations, e.g., blood and urine samples (\emph{features}).
+Cohort studies are population-based studies involving usually large numbers of randomly selected individuals and comprising numerous attributes, ranging from self-reported interview data to results from various medical examinations. %, e.g., blood and urine samples (\emph{features}).
 %%
 Since recently, medical imaging has been used as an additional instrument to assess risk factors and potential prognostic information.
 %%
@@ -82,7 +83,7 @@ We took the following steps to achieve this goal.
 	%%
 	\item Combine shape variability visualization techniques with information visualizations of non-image data \cite{Klemm2014VIS}.
 	%%
-	\item Provide similarity measures and visualizations that involve associations between features out of the focus of the epidemiologists to allow for hypothesis generation \cite{Klemm2014BVM}.
+	%\item Provide similarity measures and visualizations that involve associations between features out of the focus of the epidemiologists to allow for hypothesis generation \cite{Klemm2014BVM}.
 	%%
 	\item Use data mining to derive shape-based groups of subjects using clustering techniques \cite{Klemm2013VMV}.
 	%%
