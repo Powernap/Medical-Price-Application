@@ -170,7 +170,7 @@ To determine whether a subject is prone to be affected by a certain disease, \em
 %
 Graphic data representation is largely used to present results rather than gaining insight.
 
-\begin{figure}[htb]
+\begin{figure}[!t]
  \centering
  % \includegraphics[width=1\textwidth, resolution=300]{figures/visualization}
  \includegraphics[width=3.0in]{figures/visualization.pdf}
