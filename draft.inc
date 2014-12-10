@@ -7,7 +7,7 @@
 
 % for anonymous conference submission please enter your SUBMISSION ID
 % instead of the author's name (and leave the affiliation blank) !!
-\author[Paul Klemm et al.]
+\author[Klemm et al.]
        {Paul Klemm$^{1}$, Kai Lawonn$^{1}$, Sylvia Gla{\ss}er$^{1}$, Steffen Oeltze-Jafra$^{1}$, Katrin Hegenscheid$^{2}$, Henry V{\"o}lzke$^{2}$, Bernhard Preim$^{1}$
         \\
 % For Computer Graphics Forum: Please use the abbreviation of your first name.
@@ -345,8 +345,20 @@ These values can be used to create a contingency matrix, which displays correlat
 In a qualitative evaluation, epidemiologists used this visualizations to observe potential unexpected correlations, forming a new hypothesis, which serves as starting point for a new analysis \cite{Klemm2014VIS}.
 
 %% ---------------------------------
-%\noindent \textbf{Hypothesis-generation using Overview Visualizations}.
-%
+\noindent \textbf{Web-based Protoype Development}.
+%%
+To employ rapid feedback between us and the epidemiological experts, all prototypes with exception of \cite{Klemm2013VMV} are developed using web-based technologies.
+%%
+Exchanging results becomes as easy as providing sharing a website link, no software needs to be installed.
+%% TODO: Add footnotes
+3D scenes are rendered using through \texttt{WebGL} (\texttt{Three.js}\footnote{Originally developed by R. Cabello, \href{http://threejs.org}{\texttt{threejs.org}}}), information visualizations are implemented using \texttt{D3.js}\footnote{Developed by M. Bostock, \href{http://d3js.org/}{\texttt{d3js.org}}} \cite{Klemm2014VIS}.
+%%
+Most recently, the statistical language \texttt{R} has also advance Web technologies, which allowed us to provide interactive documents through a \texttt{R Shiny}\footnote{Developed by RStudio, Inc., \href{http://shiny.rstudio.com}{\texttt{shiny.rstudio.com}}} \cite{Klemm2015IVAPP}.
+%%
+We chose this way, because we believe that need for efficient exchangeable and installable evaluation methods is going to increase, as data acquisition for modern cohort study becomes distributed over many locations instead of being centered around one medical institution.
+%%
+%Also, topics, such as crowdsourcing segmentation tasks will get more attention with increasing data volume.
+
 \section{Conclusion and Future Work}
 We presented IVA tools for image and non-image centric cohort study data.
 %%
