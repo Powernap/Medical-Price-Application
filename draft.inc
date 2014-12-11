@@ -92,9 +92,9 @@ We took the following steps to achieve this goal.
 %
 The proposed methods are introduced as part of an Interactive Visual Analysis approach presented in the following section.
 %
-All publications use a lumbar spine data set from the Study of Health in Pomerania \cite{SHIP}.
+All publications use a lumbar spine data set from the SHIP \cite{SHIP}.
 %
-It consists of 6.753 subjects from two cohorts with 77 parameter compiled by domain experts.
+It consists of 6.753 subjects from two cohorts with 134 parameter compiled by domain experts.
 %
 The image data was segmented using a tetrahedron-based finite element model \cite{Rak2013}.
 
@@ -131,7 +131,9 @@ This workflow is briefly described in the following section.
   \label{fig:workflowcomparison}
 \end{figure}
 %
-Figure~\ref{fig:workflowcomparison} (left) presents the epidemiological workflow following Thew and colleagues, which is described as follows \cite{Thew2009}:
+Figure~\ref{fig:workflowcomparison} (left) presents the epidemiological workflow following Thew and colleagues \cite{Thew2009}.
+%%
+It is described as follows:
 %
 \begin{enumerate}
 	\item A hypothesis is derived from observations made by clinicians in their daily routine.
@@ -176,7 +178,7 @@ Graphic data representation is largely used to present results rather than gaini
  \includegraphics[width=3.0in]{figures/visualization.pdf}
  \caption{(Left) Screenshot from the \emph{IVA} system, which is divided as follows: (a) The sidebar containing all features; (b) the canvas area where features can be added via drag and drop and the visualization can be chosen automatically according to the data type; (c) the pivot table showing the exact numbers for each displayed feature combination.
  %%
- The data displayed is used to analyze the lumbar spine \cite{Klemm2014VIS}.
+ The data displayed is used to analyze the lumbar spine.
  %%
  %Dropping the \emph{age} parameter on the already plotted \emph{body size} container creates a mosaic plot combining both features (right) \cite{Klemm2014VIS}.
  }
@@ -300,9 +302,9 @@ Figure~\ref{fig:hypopthesisbased} shows a clustering results for subjects with l
  %
  Mean shapes between the groups show no difference.
  %
- (b) Shape-based clustering for all subjects who suffered from back pain yields 6 groups. 
+ (b) Shape-based clustering for all subjects who suffered from back pain yields 6 groups \cite{Klemm2014VIS}.
  %
- Note that the difference in subject count is due to the missing shape information for some subjects.
+ %Note that the difference in subject count is due to the missing shape information for some subjects.
  %
 % The total count of subjects in (b) is smaller 
  }
@@ -347,15 +349,15 @@ In a qualitative evaluation, epidemiologists used this visualizations to observe
 %% ---------------------------------
 \noindent \textbf{Web-based Protoype Development}.
 %%
-To employ rapid feedback between us and the epidemiological experts, all prototypes with exception of \cite{Klemm2013VMV} are developed using web-based technologies.
+To employ rapid feedback between us and the epidemiological experts, all prototypes with exception of \cite{Klemm2013VMV} were developed using web-based technologies.
 %%
 Exchanging results becomes as easy as providing sharing a website link, no software needs to be installed.
 %% TODO: Add footnotes
 3D scenes are rendered using through \texttt{WebGL} (\texttt{Three.js}\footnote{Originally developed by R. Cabello, \href{http://threejs.org}{\texttt{threejs.org}}}), information visualizations are implemented using \texttt{D3.js}\footnote{Developed by M. Bostock, \href{http://d3js.org/}{\texttt{d3js.org}}} \cite{Klemm2014VIS}.
 %%
-Most recently, the statistical language \texttt{R} has also advance Web technologies, which allowed us to provide interactive documents through a \texttt{R Shiny}\footnote{Developed by RStudio, Inc., \href{http://shiny.rstudio.com}{\texttt{shiny.rstudio.com}}} \cite{Klemm2015IVAPP}.
+Most recently, the statistical language \texttt{R} allows to publish interactive documents through a \texttt{R Shiny}\footnote{Developed by RStudio, Inc., \href{http://shiny.rstudio.com}{\texttt{shiny.rstudio.com}}} as web page \cite{Klemm2015IVAPP}.
 %%
-We chose this way, because we believe that need for efficient exchangeable and installable evaluation methods is going to increase, as data acquisition for modern cohort study becomes distributed over many locations instead of being centered around one medical institution.
+We chose web technologies, because we believe that the need for efficient exchangeable and installable evaluation methods is going to increase, as data acquisition for modern cohort study becomes distributed over many locations instead of being centered around one medical institution.
 %%
 %Also, topics, such as crowdsourcing segmentation tasks will get more attention with increasing data volume.
 
