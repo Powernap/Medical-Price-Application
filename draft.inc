@@ -94,7 +94,7 @@ The proposed methods are introduced as part of an Interactive Visual Analysis ap
 %
 All publications use a lumbar spine data set from the SHIP \cite{SHIP}.
 %
-It consists of 6.753 subjects from two cohorts with 134 parameter compiled by domain experts.
+It consists of 3.234 subjects from two cohorts with 134 parameters compiled by domain experts.
 %
 The image data was segmented using a tetrahedron-based finite element model \cite{Rak2013}.
 
@@ -113,17 +113,17 @@ Age for example strongly correlates with most types of cancer and therefore a re
 Visual analysis of cohort study data aims to extend the standard epidemiological workflow for the following aspects:
 \begin{itemize}
 	\item Enable epidemiologists to examine both image-based as well as non-image data, e.g., sociodemographic features and attributes derived from the image data.
-	\item Provide methods that assess local variations of shape of a anatomical structure under different medical related or lifestyle influences.
+	\item Provide methods that assess local variations of shape of an anatomical structure under different medical related or lifestyle influences.
 	\item Visual validation of presumptions and hypothesis about heterogenous features influencing various diseases using appropriate visualizations.
 	\item Use of data mining tools such as clustering or the principal component analysis provides possibilities to group subjects regarding shape or other features.
 \end{itemize}
 %
-To create methods suitable for application in the epidemiological context it is essential to understand how epidemiologists work.
+To create methods suitable for application in the epidemiological context, it is essential to understand how epidemiologists work.
 %
 This workflow is briefly described in the following section.
 %
 %-------------------------------------------------------------------------
-\subsection{The classic Epidemiological Workflow} \label{sec:epiworkflow}
+\subsection{The Classic Workflow} \label{sec:epiworkflow}
 \begin{figure}[!t]
  \centering
  \includegraphics[width=3.0in]{figures/workflow_comparison}
@@ -131,9 +131,7 @@ This workflow is briefly described in the following section.
   \label{fig:workflowcomparison}
 \end{figure}
 %
-Figure~\ref{fig:workflowcomparison} (left) presents the epidemiological workflow following Thew and colleagues \cite{Thew2009}.
-%%
-It is described as follows:
+The epidemiological workflow is described as follows: \cite{Thew2009}.
 %
 \begin{enumerate}
 	\item A hypothesis is derived from observations made by clinicians in their daily routine.
@@ -145,7 +143,9 @@ It is described as follows:
 	\item Statistical methods, such as regression analysis, assess the association of selected features with the investigated disease.
 \end{enumerate}
 %
-Reproducibility of results is an epidemiological key requirement.
+It can be seen in Figure~\ref{fig:workflowcomparison} (left).
+%
+Reproducibility of results is a key requirement.
 %
 It is difficult to achieve, since many physicians are involved when thousands of test persons are examined and interviewed.
 %
@@ -187,13 +187,13 @@ Graphic data representation is largely used to present results rather than gaini
 \subsection{Epidemiological Data} \label{EpidemiologicalData}
 Epidemiological data are highly heterogenous and incomplete.
 %
-Information about medical history and examinations, genetic conditions, geographical data, questionnaire results and image data yield a complex data space for each subject.
+Information about medical history and examinations, genetic conditions, geographical data, questionnaire results and image data yield a complex attribute space for each subject.
 %
 For ethical, legal or medical reasons some features cannot be gathered for each subject.
 %
 The most obvious example are women-specific questions about menstrual status or number of born children.
 %
-Follow-up examinations or questions about conditions like medications taken after a diagnosed disease also yield features only available for a small amount of subjects.
+Follow-up questions about conditions like medications taken after a diagnosed disease also yield features only available for a small amount of subjects.
 %
 Indicators for medical conditions as well as questions about a subject's lifestyle are also often \emph{dichotomous}--they have two manifestations (\emph{Yes} or \emph{No}).
 %
@@ -217,7 +217,7 @@ Decisions have to be made on how image data are \emph{compared} and \emph{quanti
 %%
 Segmentation masks representing the voxels of an anatomical structure would be ideal, since many different key figures, e.g., volume, largest diameter or aspect ratio, can be derived from them.
 %%
-Since reliable and efficient segmentation techniques for these data are not available in general, epidemiologists are forced to measure the data by hand, which is a very tedious work with respect to the number of necessary landmarks and the number of subjects.
+Since reliable and efficient segmentation techniques for these data are not available in general, epidemiologists are forced to measure the data by hand, which is a tedious work.
 %%
 Information derived by landmarks, such as top and bottom point of a vertebra, are by far not as expressive and versatile as segmentation masks describing its whole shape.
 %%
@@ -319,7 +319,7 @@ A decision tree classifier was calculated for each non-image variable and assess
 %%
 Low classification errors by trees with few decision rules are preferred.
 %%
-A interactive scatter plot represents each decision tree as data point using the accuracy number of rules, allowing for a fast overview visualization.
+A interactive \emph{decision tree quality plot} represents each decision tree as data point using the accuracy number of rules, allowing for a fast overview visualization.
 %
 Decision trees for each data point can be examined in detail by interacting with the scatter plot.
 %%
