@@ -158,11 +158,12 @@ If the data acquisition process changes, an information bias is introduced to th
 
 In longitudinal cohort studies, grouping subjects using epidemiological features is essential in order to allow per-group risk determination.
 %
-Grouping depends on the underlying hypothesis.
+Grouping depends on the underlying hypothesis, e.g., a indicator variable for a investigated disease.
+%%
 %
-Age for example is divided into groups (e.g. in 20 year steps) when investigating its influence on a condition.
+%Age for example is divided into groups (e.g. in 20 year steps) when investigating its influence on a condition.
 %
-These groups strongly depend on the condition of interest and therefore there is no standard on how to categorize them.
+%These groups strongly depend on the condition of interest and therefore there is no standard on how to categorize them.
 %%
 To determine whether a subject is prone to be affected by a certain disease, \emph{relative risks} are expressed through the evaluation of p-values, which indicate statistical significance.
 %
@@ -174,7 +175,7 @@ To determine whether a subject is prone to be affected by a certain disease, \em
 %
 %Statistics tools such as \texttt{SPSS}\footnote{Product of IBM; \url{http://ibm.com/software/analytics/spss/}} play a major role for analyzing epidemiological data.
 %
-Graphic data representation is largely used to present results rather than gaining insight.
+Graphical data representation is largely used to \emph{present results} rather than \emph{gaining insight}.
 
 \begin{figure}[!t]
  \centering
