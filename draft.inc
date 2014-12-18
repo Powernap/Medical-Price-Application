@@ -78,7 +78,7 @@ The statistically driven epidemiological workflow only allows to determine \emph
 
 This work is the result of a collaboration between epidemiologists of the Study of Health in Pomerania (SHIP) \cite{SHIP} and computer scientists of the University of Magdeburg under the umbrella of the DFG Project "Visual Analysis in Public Health".
 %%
-We focus on developing techniques for analyzing both image- and non-image data of cohort studies concurrently and trigger \emph{hypotheses generation} by incorporating overview visualizations.
+We focus on developing techniques for analyzing both image and non-image data of cohort studies concurrently and trigger \emph{hypotheses generation} by incorporating overview visualizations.
 %%
 We took the following steps to achieve this goal.
 
@@ -266,7 +266,7 @@ A feature selection from a shape-based clustering creates \emph{shape groups}.
 %
 The feature is mapped using an automatically chosen visualization appropriate for its data type. %(described in detail in the following section).
 %
-The visualization techniques have to combine both image-and non-image data in order to set domain and range data in relation to each other.
+The visualization techniques have to combine both image and non-image data in order to set domain and range data in relation to each other.
 %
 In our system, the visualization can either be brushed or new features can be added to the analysis. 
 %Subsequently the visualization can be either brushed or new features can be added to the analysis.
@@ -282,6 +282,11 @@ Selecting features also triggers a \emph{multivariate analysis} using contingenc
 %An analysis with the aim of hypothesis generation of image-based data starts with a clustering of the structure 
 %
 A sample workflow using interaction and visualization techniques can be seen in Figure~\ref{fig:visualization} \cite{Klemm2014VIS}.
+%%
+
+To our knowledge, this is the first system allowing for concurrent analysis of image and non-image data for image-centric cohort study data.
+%%
+The support and combination of \emph{hypothesis-based} and \emph{hypothesis-free analysis} allowed our collaborating partners to analyze their data in a new explorative way.
 
 \noindent \textbf{Visualization and Analysis of Organ Shape Variability}. 
 \emph{Hypothesis generation} based on organ shape is triggered by suggesting interesting feature correlations.
@@ -329,6 +334,10 @@ A interactive \emph{decision tree quality plot} represents each decision tree as
 Decision trees for each data point can be examined in detail by interacting with the scatter plot.
 %%
 The work concludes that the given model precision is not enough to characterize back pain, but allows to classify other non-image variables, such as the subject age when he or she started smoking \cite{Klemm2015IVAPP}.
+%%
+%The approach allows to assess the descriptive power of a variable set towards a large heterogenous data set.
+%%
+The approach enables epidemiologists to quickly assess the descriptive power of a variable set towards all other variables in a data set.
 %% ---------------------------------
 
 \noindent \textbf{Hypothesis-generation using Overview Visualizations}.
@@ -352,15 +361,15 @@ These values can be used to create a contingency matrix, which displays correlat
 In a qualitative evaluation, epidemiologists used this visualizations to observe potential unexpected correlations, forming a new hypothesis, which serves as starting point for a new analysis \cite{Klemm2014VIS}.
 
 %% ---------------------------------
-\noindent \textbf{Web-based Protoype Development}.
+\noindent \textbf{Web-based Prototype Development}.
 %%
-To employ rapid feedback between us and the epidemiological experts, all prototypes with exception of \cite{Klemm2013VMV} were developed using web-based technologies.
+All prototypes, with exception of \cite{Klemm2013VMV}, rely on web-based technologies to employ rapid feedback between us and the epidemiological experts.
 %%
-Exchanging results becomes as easy as providing sharing a website link, no software needs to be installed.
-%% TODO: Add footnotes
+Exchanging software becomes as easy as sharing a website link.
+%%
 3D scenes are rendered using through \texttt{WebGL} (\texttt{Three.js}\footnote{Originally developed by R. Cabello, \href{http://threejs.org}{\texttt{threejs.org}}}), information visualizations are implemented using \texttt{D3.js}\footnote{Developed by M. Bostock, \href{http://d3js.org/}{\texttt{d3js.org}}} \cite{Klemm2014VIS}.
 %%
-Most recently, the statistical language \texttt{R} allows to publish interactive documents through a \texttt{R Shiny}\footnote{Developed by RStudio, Inc., \href{http://shiny.rstudio.com}{\texttt{shiny.rstudio.com}}} as web page \cite{Klemm2015IVAPP}.
+Most recently, the statistical language \texttt{R} allows to publish interactive documents through \texttt{R Shiny}\footnote{Developed by RStudio, Inc., \href{http://shiny.rstudio.com}{\texttt{shiny.rstudio.com}}} as web page \cite{Klemm2015IVAPP}.
 %%
 We chose web technologies, because we believe that the need for efficient exchangeable and installable evaluation methods is going to increase, as data acquisition for modern cohort study becomes distributed over many locations instead of being centered around one medical institution.
 %%
@@ -375,6 +384,9 @@ Overview visualizations of both image and non-image data allow for explorative a
 %%
 Using these techniques, new insights about possible risk factors and parameter associations could be derived.
 %%
+We were able to identify various multivariate analysis methods as most important for hypothesis generation.
+%%
+%As new hypotheses are derived through organ shape analyses, the expert may become interested in the shape variance of a sub-structure, which may not be covered in the segmentation model, raising the need for more detailed segmentations.
 
 Future work in this field comprises methods for providing overview visualizations for multivariate correlations using regression models.
 %%
