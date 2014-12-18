@@ -35,32 +35,23 @@
 \begin{abstract}
 Epidemiological population studies impose information about a set of subjects (a cohort) to characterize disease-specific risk factors.
 %%
-Cohort studies comprise heterogenous variables describing the medical condition, demographic and lifestyle factors as well as medical image data.
+Cohort studies comprise heterogenous variables describing the medical condition, demographic and lifestyle factors and, most recently, also medical image data for each subject.
 %%
-Standard statistic analysis allows to analyze few variables concurrently!
-%These data are hard to analyze concurrently towards different diseases.
-%%
-%The data are analyzed using a priori defined hypotheses to find statistically significant correlations between features (associations).
-%%
-%Modern cohort studies incorporate medical image data.
-%%
-%The statistically driven epidemiological workflow only allows to determine associations between image-derived metrics, such as distances extracted from landmarks of the segmentation model.
+Standard statistical analysis allows to analyze only few variables concurrently!
 %%
 
 We propose methods for analyzing image-centric cohort study data with focus on assessing influences of organ shape.
 %%
-To account for epidemiological key requirements such as reproducibility and statistical resilience of results, the epidemiological workflow is analyzed and divided into different steps.
+To account for epidemiological key requirements, such as reproducibility and statistical resilience of results, the epidemiological workflow is analyzed and divided into different steps.
 %%
 We establish an Interactive Visual Analysis (IVA) approach for image-based cohort study data, enabling epidemiologists to examine both image-based as well as non-image data concurrently.
 %%
 This approach enables hypotheses validation and generation by incorporating human pattern recognition as well as data mining methods.
 %%
-Overview visualizations of image and non-image data allow the epidemiologists to assess many variables at once to derive new insight and hypotheses.
-%Using all reliable information from the image segmentation linked to non-image features aims to unveil associations by applying an iterative analysis approach.
+Overview visualizations of image and non-image data allow the epidemiologists to assess many variables simultaneously.
 
 \begin{classification} % according to http://www.acm.org/class/1998/
-% ToDo: [high] Update Classification
-\CCScat{Computer Graphics}{I.3.3}{Picture/Image Generation}{Line and curve generation}
+\CCScat{Computer Applications}{J.3}{Life and Medical Sciences}{Health}
 \end{classification}
 
 \end{abstract}
@@ -118,7 +109,7 @@ Visual analysis of cohort study data aims to extend the standard epidemiological
 \begin{itemize}
 	\item Enable epidemiologists to examine both image-based as well as non-image data, e.g., sociodemographic features and attributes derived from the image data.
 	\item Provide methods that assess local variations of shape of an anatomical structure under different medical related or lifestyle influences.
-	\item Visual validation of presumptions and hypothesis about heterogenous features influencing various diseases using appropriate visualizations.
+	\item Allow visual validation of presumptions and hypotheses about heterogenous features influencing various diseases using appropriate visualizations.
 	\item Use of data mining tools such as clustering or the principal component analysis provides possibilities to group subjects regarding shape or other features.
 \end{itemize}
 %
