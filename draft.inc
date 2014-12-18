@@ -35,24 +35,28 @@
 \begin{abstract}
 Epidemiological population studies impose information about a set of subjects (a cohort) to characterize disease-specific risk factors.
 %%
-Cohort studies comprise heterogenous variables (features) describing the medical condition as well as demographic and lifestyle factors.
+Cohort studies comprise heterogenous variables describing the medical condition, demographic and lifestyle factors as well as medical image data.
 %%
-The data are analyzed using a priori defined hypotheses to find statistically significant correlations between features (associations).
+Standard statistic analysis allows to analyze few variables concurrently!
+%These data are hard to analyze concurrently towards different diseases.
 %%
-Modern cohort studies incorporate medical image data.
+%The data are analyzed using a priori defined hypotheses to find statistically significant correlations between features (associations).
 %%
-The statistically driven epidemiological workflow only allows to determine associations between image-derived metrics, such as distances extracted from landmarks of the segmentation model.
+%Modern cohort studies incorporate medical image data.
+%%
+%The statistically driven epidemiological workflow only allows to determine associations between image-derived metrics, such as distances extracted from landmarks of the segmentation model.
 %%
 
-We propose methods for analyzing image- centric cohort study data with focus on assessing influences of organ shape.
+We propose methods for analyzing image-centric cohort study data with focus on assessing influences of organ shape.
 %%
 To account for epidemiological key requirements such as reproducibility and statistical resilience of results, the epidemiological workflow is analyzed and divided into different steps.
 %%
-Based on this analysis, an Interactive Visual Analysis (IVA) approach is proposed that enables epidemiologists to examine both image-based as well as non-image data, e.g., sociodemographic features and attributes derived from the image data.
+We establish an Interactive Visual Analysis (IVA) approach for image-based cohort study data, enabling epidemiologists to examine both image-based as well as non-image data concurrently.
 %%
 This approach enables hypotheses validation and generation by incorporating human pattern recognition as well as data mining methods.
 %%
-Using all reliable information from the image segmentation linked to non-image features aims to unveil associations by applying an iterative analysis approach.
+Overview visualizations of image and non-image data allow the epidemiologists to assess many variables at once to derive new insight and hypotheses.
+%Using all reliable information from the image segmentation linked to non-image features aims to unveil associations by applying an iterative analysis approach.
 
 \begin{classification} % according to http://www.acm.org/class/1998/
 % ToDo: [high] Update Classification
@@ -74,7 +78,7 @@ The statistically driven epidemiological workflow only allows to determine \emph
 
 This work is the result of a collaboration between epidemiologists of the Study of Health in Pomerania (SHIP) \cite{SHIP} and computer scientists of the University of Magdeburg under the umbrella of the DFG Project "Visual Analysis in Public Health".
 %%
-The focus lies on developing novel techniques for analyzing both image- and non-image data of cohort studies simultaneously.
+We focus on developing techniques for analyzing both image- and non-image data of cohort studies concurrently and trigger \emph{hypotheses generation} by incorporating overview visualizations.
 %%
 We took the following steps to achieve this goal.
 
@@ -127,7 +131,7 @@ This workflow is briefly described in the following section.
 \begin{figure}[!t]
  \centering
  \includegraphics[width=3.0in]{figures/workflow_comparison}
- \caption{Interactive Visual Analysis (\emph{IVA}) tools complement parts of the epidemiological workflow instead of replacing them. The appropriate combination of statistical and interactive-driven analysis shows promising potential to unveil the information in the data. (a) shows the standard epidemiological workflow, (b) the \emph{IVA} supported one.}
+ \caption{Interactive Visual Analysis (\emph{IVA}) tools complement parts of the epidemiological workflow instead of replacing them. The appropriate combination of statistical and interactive-driven analysis shows promising potential to unveil the information in the data. (a) shows the standard epidemiological workflow, (b) the \emph{IVA} supported one we proposed in \cite{Klemm2014VIS}.}
   \label{fig:workflowcomparison}
 \end{figure}
 %
