@@ -69,7 +69,7 @@ The statistically driven epidemiological workflow only allows to determine \emph
 
 This work is the result of a collaboration between epidemiologists of the Study of Health in Pomerania (SHIP) \cite{SHIP} and computer scientists of the University of Magdeburg under the umbrella of the DFG Project "Visual Analysis in Public Health".
 %%
-We focus on developing techniques for analyzing both image and non-image data of cohort studies concurrently and trigger \emph{hypotheses generation} by incorporating overview visualizations.
+We focus on developing techniques for analyzing \emph{both image and non-image data} of cohort studies concurrently and trigger \emph{hypotheses generation} by incorporating overview visualizations.
 %%
 We took the following steps to achieve this goal.
 
@@ -80,7 +80,7 @@ We took the following steps to achieve this goal.
 	%%
 	%\item Provide similarity measures and visualizations that involve associations between features out of the focus of the epidemiologists to allow for hypothesis generation \cite{Klemm2014BVM}.
 	%%
-	\item Use data mining to derive shape-based groups of subjects using clustering techniques \cite{Klemm2013VMV}.
+	\item Use data mining methods to derive shape-based groups of subjects using clustering techniques \cite{Klemm2013VMV}.
 	%%
 	\item Use classification methods to derive insight into specific disease risk factors \cite{Klemm2015IVAPP}.
 \end{itemize}
@@ -108,9 +108,9 @@ Age for example strongly correlates with most types of cancer and therefore a re
 Visual analysis of cohort study data aims to extend the standard epidemiological workflow for the following aspects:
 \begin{itemize}
 	\item Enable epidemiologists to examine both image-based as well as non-image data, e.g., sociodemographic features and attributes derived from the image data.
-	\item Provide methods that assess local variations of shape of an anatomical structure under different medical related or lifestyle influences.
+	\item Provide methods, which assess local variations of shape of an anatomical structure under different medical related or lifestyle influences.
 	\item Allow visual validation of presumptions and hypotheses about heterogenous features influencing various diseases using appropriate visualizations.
-	\item Use of data mining tools such as clustering or the principal component analysis provides possibilities to group subjects regarding shape or other features.
+	\item Use of data mining tools, such as clustering or the principal component analysis, provide possibilities to group subjects regarding the shape or other features.
 \end{itemize}
 %
 To create methods suitable for application in the epidemiological context, it is essential to understand how epidemiologists work.
@@ -122,7 +122,7 @@ This workflow is briefly described in the following section.
 \begin{figure}[!t]
  \centering
  \includegraphics[width=3.0in]{figures/workflow_comparison}
- \caption{Interactive Visual Analysis (\emph{IVA}) tools complement parts of the epidemiological workflow instead of replacing them. The appropriate combination of statistical and interactive-driven analysis shows promising potential to unveil the information in the data. (a) shows the standard epidemiological workflow, (b) the \emph{IVA} supported one we proposed in \cite{Klemm2014VIS}.}
+ \caption{Interactive Visual Analysis (\emph{IVA}) tools complement parts of the epidemiological workflow instead of replacing them. The appropriate combination of statistical and interactive-driven analysis shows promising potential to unveil the information in the data. (a) shows the standard epidemiological workflow, (b) shows our proposed \emph{IVA} supported one \cite{Klemm2014VIS}.}
   \label{fig:workflowcomparison}
 \end{figure}
 %
@@ -138,7 +138,7 @@ The epidemiological workflow is described as follows: \cite{Thew2009}.
 	\item Statistical methods, such as regression analysis, assess the association of selected features with the investigated disease.
 \end{enumerate}
 %
-It can be seen in Figure~\ref{fig:workflowcomparison} (left).
+It can be seen in Figure~\ref{fig:workflowcomparison} (a).
 %
 Reproducibility of results is a key requirement.
 %
@@ -247,7 +247,7 @@ Morphometric information from landmarks comprises thickness, diameter or length 
 
 \section{Interactive Visual Analysis of Cohort Study Data}
 
-The proposed \emph{IVA} workflow (Fig~\ref{fig:workflowcomparison} (right)) knows three major steps: \emph{feature selection}, \emph{visualization} and \emph{brushing}.
+The proposed \emph{IVA} workflow (Fig~\ref{fig:workflowcomparison} (b)) shows three major steps: \emph{feature selection}, \emph{visualization} and \emph{brushing}.
 %
 A hypothesis-driven analysis usually starts with the selection of features.
 %
@@ -278,11 +278,13 @@ A sample workflow using interaction and visualization techniques can be seen in 
 To our knowledge, this is the first system allowing for concurrent analysis of image and non-image data for image-centric cohort study data.
 %%
 The support and combination of \emph{hypothesis-based} and \emph{hypothesis-free analysis} allowed our collaborating partners to analyze their data in a new explorative way.
+%%
+The suitability of the method was confirmed through informal expert feedback.
 
 \noindent \textbf{Visualization and Analysis of Organ Shape Variability}. 
 \emph{Hypothesis generation} based on organ shape is triggered by suggesting interesting feature correlations.
 %
-This allows for assessment of shape groups, which can not be accomplished with standard epidemiological methods.
+This allows for assessment of shape groups, which cannot be accomplished with standard epidemiological methods.
 %
 % The contributions are:
 % \begin{itemize}
@@ -358,7 +360,7 @@ All prototypes, with exception of \cite{Klemm2013VMV}, rely on web-based technol
 %%
 Exchanging software becomes as easy as sharing a website link.
 %%
-3D scenes are rendered using through \texttt{WebGL} (\texttt{Three.js}\footnote{Originally developed by R. Cabello, \href{http://threejs.org}{\texttt{threejs.org}}}), information visualizations are implemented using \texttt{D3.js}\footnote{Developed by M. Bostock, \href{http://d3js.org/}{\texttt{d3js.org}}} \cite{Klemm2014VIS}.
+3D scenes are rendered using \texttt{WebGL} (\texttt{Three.js}\footnote{Originally developed by R. Cabello, \href{http://threejs.org}{\texttt{threejs.org}}}) and information visualizations are implemented using \texttt{D3.js}\footnote{Developed by M. Bostock, \href{http://d3js.org/}{\texttt{d3js.org}}} \cite{Klemm2014VIS}.
 %%
 Most recently, the statistical language \texttt{R} allows to publish interactive documents through \texttt{R Shiny}\footnote{Developed by RStudio, Inc., \href{http://shiny.rstudio.com}{\texttt{shiny.rstudio.com}}} as web page \cite{Klemm2015IVAPP}.
 %%
@@ -371,11 +373,13 @@ We presented IVA tools for image and non-image centric cohort study data.
 %%
 The methods aim to complement weaknesses of the existing epidemiological workflow rather than replacing it.
 %%
-Overview visualizations of both image and non-image data allow for explorative analysis of cohort study data, which was not possible for our collaborators before.
+Overview visualizations of both image and non-image data allow for explorative analysis of cohort study data, \emph{which was not possible} for our collaborators \emph{before}.
 %%
 Using these techniques, new insights about possible risk factors and parameter associations could be derived.
 %%
 We were able to identify various multivariate analysis methods as most important for hypothesis generation.
+%%
+Domain experts rated our system positively.
 %%
 %As new hypotheses are derived through organ shape analyses, the expert may become interested in the shape variance of a sub-structure, which may not be covered in the segmentation model, raising the need for more detailed segmentations.
 
