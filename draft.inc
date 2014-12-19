@@ -354,7 +354,7 @@ In a qualitative evaluation, epidemiologists used this visualizations to observe
 %% ---------------------------------
 \noindent \textbf{Web-based Prototype Development}.
 %%
-All prototypes, with exception of \cite{Klemm2013VMV}, rely on web-based technologies to employ rapid feedback between us and the epidemiological experts.
+All prototypes, with exception of \cite{Klemm2013VMV}, rely on web-based technologies to employ rapid feedback between computer scientists and the epidemiological experts.
 %%
 Exchanging software becomes as easy as sharing a website link.
 %%
