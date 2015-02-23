@@ -1,4 +1,4 @@
-# Eurographics 2015 Medical Price
+# Eurographics 2015 Medical Prize
 
 This is the working repository for my application for the [*Dirk Bartz Prize for Visual Computing in Medicine 2015  Eurographics Medical Prize*] (http://www.eurographics2015.ch/eurographics-medical-prize/)
 
