@@ -1,5 +1,27 @@
 # Reviews
 
+Rating scale:
+
+- 0: totally unacceptable
+- 1: very poor
+- 2: poor
+- 3: clearly below EG standard
+- 4: dubious - not quite acceptable
+- 5: marginal - only quite acceptable
+- 6: acceptable
+- 7: good
+- 8: very good
+- 9: excellent
+
+Confidence scale:
+
+- 0: Very unconfident, really just a guess
+- 1: Rather unconfident, but I know a bit
+- 2: Moderately confident, I know as much as most
+- 3: Pretty confident, I know this area well
+- 4: Extremely confident, I consider myself an expert
+
+
 ## Review 1
 
 Overall Recommendation: 6
